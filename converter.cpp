@@ -1,8 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <string>
-#include <vector>
+#include "runner.hpp"
 using namespace std;
 
 
@@ -39,18 +35,21 @@ public:
 };
 
 
+
 std::string output (const std::vector<std::vector<std::string>> _pages) {
     std::vector<std::string> titles;
     std::vector<std::string> images;
     std::vector<std::string> alts;
     std::vector<std::string> headings;
     std::vector<std::string> texts;
+    Pager pager;
     for (const auto& page : _pages) {
         titles.push_back(page[0]);
         images.push_back(page[1]);
         alts.push_back(page[2]);
         headings.push_back(page[3]);
         texts.push_back(page[4]);
+        pager.make_page(page[0]);
     }
     std::ostringstream oss;
     oss << "{\n";

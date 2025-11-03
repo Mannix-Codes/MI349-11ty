@@ -1,6 +1,5 @@
 ---
 layout: my-layout.liquid
-title: Keys
+title: keys
 ---
-
-{% index_page 'keys' %}
+{% index_page keys %}

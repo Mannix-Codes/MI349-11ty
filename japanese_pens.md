@@ -1,6 +1,5 @@
 ---
 layout: my-layout.liquid
-title: Keys
+title: japanese_pens
 ---
-
-{% index_page 'japanese_pens' %}
+{% index_page japanese_pens %}

@@ -1,8 +1,4 @@
-#include <iostream>
-#include <string>
-#include <cstdlib> // For system()
-#include "converter.cpp"
-using namespace std;
+#include "runner.hpp"
 
 int main() {
     Converter converter;
