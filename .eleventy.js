@@ -13,26 +13,27 @@ function get_picture(img_index) {
 }
 
 function index_text(title){
-  let _index = get_index(title);
-  let _text = data.texts[_index];
+  const _index = get_index(title);
+  const _text = data.texts[_index];
   return `<p>${_text}</p>`
 }
 
 function index_pic(title){
-  let _index = get_index(title);
+  const _index = get_index(title);
   return get_picture(_index);
 }
 
 function index_heading(title){
-  let _index = get_index(title);
-  let _heading = data.headings[_index];
+  const _index = get_index(title);
+  const _heading = data.headings[_index];
   return `<h1>${_heading}</h1>`
 }
 
 function build_page(title){
-  let _heading = index_heading(title);
-  let _pic = index_pic(title);
-  let _text = index_text(title);
+  const _index = get_index(title);
+  const _heading = index_heading(title);
+  const _pic = get_picture(_index);
+  const _text = index_text(title);
   return `
   ${_heading}
   <div class="contentpage">
@@ -47,13 +48,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("styles");
 
   eleventyConfig.addShortcode("index_pic", function(title){
-    let _index = get_index(title);
+    const _index = get_index(title);
     return get_picture(_index)
   }
   )
   eleventyConfig.addShortcode("index_text", function(title){
-    let _index = get_index(title);
-    let _text = data.text[_index];
+    const _index = get_index(title);
+    const _text = data.texts[_index];
     return `<p>${_text}</p>`
   }
   )

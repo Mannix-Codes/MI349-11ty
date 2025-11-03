@@ -16,7 +16,7 @@ class Pager {
             page_file << "layout: my-layout.liquid\n";
             page_file << "title: " << title << "\n";
             page_file << "---\n";
-            page_file << "{% index_page " << title << " %}\n";
+            page_file << "{% index_page \"" << title << "\" %}\n";
             page_file.close();
         }
     };
