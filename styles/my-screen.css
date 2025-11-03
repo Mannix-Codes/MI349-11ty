@@ -1,0 +1,86 @@
+
+
+body {
+    font-family: "Momo Trust Display", sans-serif;
+    color: #2B2D42;
+    background: #F9F8F8;
+    padding: 0 40px;
+    text-align: center;
+}
+
+footer {
+    width: 60%;
+    margin:50px auto;
+    background: #9B7EDE;
+    border:#2B2D42 solid;
+    border-width: 3px;
+    border-radius: 20px;
+
+}
+
+nav {
+    width: 60%;
+    margin:auto;
+    background: #9B7EDE;
+    border:#2B2D42 solid;
+    border-width: 3px;
+    border-radius: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 20px;
+    color: #2B2D42;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+h1 {
+    font-size: 8em;
+    letter-spacing: -2px;
+    margin: auto;
+}
+
+h1 strong {
+    background: #3e885b;
+    background: linear-gradient(45deg, #3e885b 0%, #DB7F67 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.mainpage {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+}
+
+div.contentpage{
+    display:flex;
+    align-items: center;
+}
+
+img.item-photo {
+    width: 30%;
+    border-radius: 20px;
+}
+
+img.picture {
+    width: 50%;
+    border-radius: 20px;
+}
+
+p{
+    padding: 10px;
+}
