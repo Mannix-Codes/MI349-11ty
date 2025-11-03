@@ -43,13 +43,17 @@ std::string output (const std::vector<std::vector<std::string>> _pages) {
     std::vector<std::string> headings;
     std::vector<std::string> texts;
     Pager pager;
+    NavMaker navmaker;
     for (const auto& page : _pages) {
         titles.push_back(page[0]);
         images.push_back(page[1]);
         alts.push_back(page[2]);
         headings.push_back(page[3]);
         texts.push_back(page[4]);
-        pager.make_page(page[0]);
+    }
+    navmaker.make_Nav(titles, "/_includes/template-layout.liquid", "/_includes/my-layout.liquid");
+    for (const auto& title : titles) {
+        pager.make_page(title);
     }
     std::ostringstream oss;
     oss << "{\n";

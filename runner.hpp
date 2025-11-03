@@ -8,6 +8,8 @@
 #include <sstream>
 #include <vector>
 #include "pager.cpp"
+#include "template_maker.cpp"
 #include "converter.cpp"
+
 
 #endif // RUNNER_HPP
