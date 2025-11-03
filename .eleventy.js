@@ -8,13 +8,13 @@ function get_index(_title){
 
 function get_picture(img_index) {
   const image=data.images[img_index];
-  const alt=data.alt[img_index];
+  const alt=data.alts[img_index];
   return `<img src="/images/${image}" alt="${alt}" class="picture">`
 }
 
 function index_text(title){
   let _index = get_index(title);
-  let _text = data.text[_index];
+  let _text = data.texts[_index];
   return `<p>${_text}</p>`
 }
 
