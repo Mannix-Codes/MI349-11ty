@@ -16,6 +16,7 @@ public:
             if (line.find("<nav>") != std::string::npos && !makenav) {
                 makenav = true;
                 outFile << "<nav>\n<ul>\n";
+                outFile << "<li><a href=\"/\">Home</a></li>\n";
                 for (const auto& title : titles) {
                     outFile << "<li><a href=\"/" << title << "\">" << title << "</a></li>\n";
                 }
@@ -24,7 +25,7 @@ public:
             else if (makenav && line.find("</nav>") != std::string::npos) {
                 makenav = false;
             }
-            else {
+            else if (!makenav) {
                 outFile << line << "\n";
             }
 

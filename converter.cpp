@@ -51,7 +51,7 @@ std::string output (const std::vector<std::vector<std::string>> _pages) {
         headings.push_back(page[3]);
         texts.push_back(page[4]);
     }
-    navmaker.make_Nav(titles, "/_includes/template-layout.liquid", "/_includes/my-layout.liquid");
+    navmaker.make_Nav(titles, "_includes/template-layout.liquid", "_includes/my-layout.liquid");
     for (const auto& title : titles) {
         pager.make_page(title);
     }
